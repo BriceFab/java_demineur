@@ -11,3 +11,5 @@ L'application n'est pas du tout terminée, vous pouvez jouer au jeu démineur. J
 Auteur: BriceFab
 Youtube : http://youtube.com/user/BriceFab123
 Twitter: https://twitter.com/BriceFab123
+
+![alt text](https://image.noelshack.com/fichiers/2020/12/2/1584479663-deminer.png)
