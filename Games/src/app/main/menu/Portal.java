@@ -39,10 +39,10 @@ public class Portal {
 	private JList<String> lstGames = new JList<>();
 	private limGame modelGame = new limGame();
 	private JLabel lblChoosegame = new JLabel();
-	private JLabel lblLoginas = new JLabel();
+	//private JLabel lblLoginas = new JLabel();
 	private Translate translate = new Translate();
 	
-	private Boolean isLogged = false;
+	private Boolean isLogged = true;
 	private String username;
 	
 	private Action actClose;
@@ -83,11 +83,13 @@ public class Portal {
 		barLaunch.setStringPainted(true);
 		barLaunch.setVisible(false);
 		
+		/*
 		GridBagConstraints gbc_lblLoginas = new GridBagConstraints();
 		gbc_lblLoginas.insets = new Insets(0, 0, 5, 0);
 		gbc_lblLoginas.gridx = 0;
 		gbc_lblLoginas.gridy = 0;
 		pnlMenu.add(lblLoginas, gbc_lblLoginas);
+		*/
 		
 		GridBagConstraints gbc_lblChoosegame = new GridBagConstraints();
 		gbc_lblChoosegame.insets = new Insets(0, 0, 5, 0);
@@ -158,7 +160,7 @@ public class Portal {
 				onActionLogin();
 			}
 		});
-		pnlAction.add(btnLogin);
+		// pnlAction.add(btnLogin);
 		
 		JButton btnClose = new JButton();
 		btnClose.setAction(actClose = new AbstractAction() {
@@ -195,7 +197,7 @@ public class Portal {
 		actPlay.setEnabled(false);
 		actPause.setEnabled(false);
 		actCancel.setEnabled(false);
-		lblLoginas.setForeground(Color.RED);
+		// lblLoginas.setForeground(Color.RED);
 		barLaunch.setMaximum(100);
 		barLaunch.setMinimum(0);
 		
@@ -285,7 +287,7 @@ public class Portal {
 		this.isLogged = bLogged;
 		actLogin.setEnabled(!isLogged);
 		if (isLogged) {
-			lblLoginas.setForeground(Color.GREEN);
+			// lblLoginas.setForeground(Color.GREEN);
 		}
 	}
 	
@@ -326,7 +328,7 @@ public class Portal {
 		actPlay.putValue(AbstractAction.NAME, translate.getMessage(Code.btnPlay));
 		actLogin.putValue(AbstractAction.NAME, translate.getMessage(Code.sLogin));
 		modelGame.changeLang(translate);
-		lblLoginas.setText(isLogged ? translate.getMessage(Code.loginAs, username) : translate.getMessage(Code.notLogin));
+		//lblLoginas.setText(isLogged ? translate.getMessage(Code.loginAs, username) : translate.getMessage(Code.notLogin));
 		if (lstGames.isSelectionEmpty()) {
 			lblChoosegame.setText(translate.getMessage(Code.noGameChosen));			
 		} else {

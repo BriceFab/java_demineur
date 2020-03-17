@@ -24,8 +24,8 @@ public class Login extends JFrame {
 
 	private JPanel contentPane = new JPanel();
 	private JLabel lblError = new JLabel();
-	private JPasswordField txtPassword = new JPasswordField();;
-	private JTextField txtIdentifiant = new JTextField();;
+	private JPasswordField txtPassword = new JPasswordField();
+	private JTextField txtIdentifiant = new JTextField();
 	private final JFrame frmPortal;
 	private final Portal portal;
 
